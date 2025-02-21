@@ -1,0 +1,41 @@
+version: '3'
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/usr/share/nginx/html
+    depends_on:
+      - php
+      - db
+    restart: always
+
+  php:
+    build: .
+    volumes:
+      - ./html:/usr/share/nginx/html
+    restart: always
+
+  db:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=laravel
+      - MYSQL_USER=laravel
+      - MYSQL_PASSWORD=laravel
+    volumes:
+      - db-data:/var/lib/mysql
+    restart: always
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8081:80"
+    environment:
+      - PMA_HOSTS=db
+      - PMA_USER=laravel
+      - PMA_PASSWORD=laravel
+
+volumes:
+  db-data:
