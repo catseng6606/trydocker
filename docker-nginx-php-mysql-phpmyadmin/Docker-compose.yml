@@ -1,41 +1,37 @@
-version: '3'
+version: "3.8"
 services:
-  web:
-    image: nginx:alpine
+  nginx:
+    build: ./nginx/
+    container_name: nginx
     ports:
-      - "8080:80"
+      - 7777:80
     volumes:
-      - ./html:/usr/share/nginx/html
-    depends_on:
-      - php
-      - db
-    restart: always
+      - ./docker-volume/log/:/var/log/nginx/
 
   php:
-    build: .
+    build: ./php/
+    container_name: php
+    expose:
+      - 9000
     volumes:
-      - ./html:/usr/share/nginx/html
-    restart: always
+      - ./docker-volume/html/:/var/www/html/
 
-  db:
-    image: mysql
-    environment:
-      - MYSQL_ROOT_PASSWORD=password
-      - MYSQL_DATABASE=laravel
-      - MYSQL_USER=laravel
-      - MYSQL_PASSWORD=laravel
+  mysql:
+    image: mysql:8.0.28
+    container_name: mysql
     volumes:
-      - db-data:/var/lib/mysql
-    restart: always
+      - ./docker-volume/mysql/:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: password
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
     ports:
-      - "8081:80"
+      - 8080:80
     environment:
-      - PMA_HOSTS=db
-      - PMA_USER=laravel
-      - PMA_PASSWORD=laravel
+      PMA_HOST: mysql
 
-volumes:
-  db-data:
