@@ -11,3 +11,7 @@
 # Built Visual Studio Code Extensions
 *.vsix
 /.qodo
+/markdown/網頁技術基礎課程.md
+/markdown/基礎網站安全.md
+/docker-nginx-php-mysql-phpmyadmin/docker-volume/mysql/*
+/docker-nginx-php-mysql-phpmyadmin/docker-volume/log/*
