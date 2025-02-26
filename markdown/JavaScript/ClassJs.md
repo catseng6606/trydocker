@@ -1,3 +1,5 @@
+# Java Script
+
 ## 什麼是 Java Script？
 
 JavaScript是一種高級的、動態的、基於物件的腳本語言，主要用於網頁開發。它可以用來創建動態網頁、網頁應用程序和移動應用程序。
@@ -5,6 +7,11 @@ JavaScript是一種高級的、動態的、基於物件的腳本語言，主要�
 * JavaScript 是一種腳本語言，可以直接執行，不需要編譯。
 * JavaScript 可以動態地修改網頁的內容和樣式。
 * JavaScript 可以用來串接後端的 Server 端應用程式和API。
+
+## 開發環境
+
+* 安裝相關的 VSCode Extensions。如：ESLint
+* 除錯: 使用 console.log() 來輸出變數的值、使用 Chrome DevTools 來 debug  JavaScript 檔案，參考：[https://5xcampus.com/posts/how-to-use-chrome-devtools.html?srsltid=AfmBOooJUSotds2qaXJvLSgxRSNEvgh5dWxaJartpJW8ZwESsfWLCv-4](https://5xcampus.com/posts/how-to-use-chrome-devtools.html?srsltid=AfmBOooJUSotds2qaXJvLSgxRSNEvgh5dWxaJartpJW8ZwESsfWLCv-4)
 
 ## JavaScript的基本語法：變數
 

@@ -1,0 +1,9 @@
+
+/* add h1 set background-color = #DDD */
+h1 {
+    background-color: #DDD;
+    display: flex; justify-content: center; align-items: center;
+    /* 設置 display 為 flex 以使其水平居中 */
+    /* display: flex 是 CSS 中用來設置彈性盒子模型（Flexbox）的屬性。
+    它允許子元素自動調整空間，並且可以方便地對齊和分配它們在容器中的空間。 */
+}
