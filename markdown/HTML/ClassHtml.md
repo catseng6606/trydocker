@@ -13,6 +13,14 @@
 * Visual Studio Code [https://code.visualstudio.com/](https://code.visualstudio.com/)
 * WebStorm [https://www.jetbrains.com/webstorm/](https://www.jetbrains.com/webstorm/)
 * Atom [https://atom-editor.cc/](https://atom-editor.cc/)
+* Sublime Text [https://www.sublimetext.com/](https://www.sublimetext.com/)
+
+## 有哪些 AI 輔助工具可以使用（個人觀點）
+
+* Codeium 
+* ChatGPT 
+* Qodo Gen
+* Google Gemini
 
 ## 什麼是 HTML?
 
